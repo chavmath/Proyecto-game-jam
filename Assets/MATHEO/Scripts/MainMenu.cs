@@ -15,7 +15,7 @@ public class MainMenu : MonoBehaviour
 
 	public void StartGame()
 	{
-		SceneManager.LoadScene("Nivel1");
+		SceneManager.LoadScene("Nivel 1 Story");
 	}
 	public void SetVolume(float volume)
 	{
