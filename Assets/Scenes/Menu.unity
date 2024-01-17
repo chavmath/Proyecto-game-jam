@@ -539,7 +539,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9fb7db60ed770af4791e1a3442d81c0a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  highlightedColor: {r: 0, g: 0, b: 0, a: 0.54509807}
 --- !u!1 &215117236
 GameObject:
   m_ObjectHideFlags: 0
@@ -687,7 +686,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 24300002, guid: 0879bddc870af3e48b29e037ad7bccfa, type: 2}
   m_audioClip: {fileID: 8300000, guid: b2e0f1e7123854443bbebd2883a1157c, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.4
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -1048,7 +1047,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9fb7db60ed770af4791e1a3442d81c0a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  highlightedColor: {r: 0, g: 0, b: 0, a: 0.54509807}
 --- !u!95 &418885658
 Animator:
   serializedVersion: 5
@@ -1407,7 +1405,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9fb7db60ed770af4791e1a3442d81c0a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  highlightedColor: {r: 0, g: 0, b: 0, a: 0.54509807}
 --- !u!95 &874072544
 Animator:
   serializedVersion: 5
@@ -1722,7 +1719,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9fb7db60ed770af4791e1a3442d81c0a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  highlightedColor: {r: 0.764151, g: 0.70941734, b: 0.26312745, a: 0.54509807}
 --- !u!95 &1229741026
 Animator:
   serializedVersion: 5
