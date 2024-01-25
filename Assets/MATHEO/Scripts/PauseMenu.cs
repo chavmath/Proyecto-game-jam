@@ -34,6 +34,17 @@ public class PauseMenu : MonoBehaviour
 		}
 	}
 
+	public void Skip()
+	{
+		SceneManager.LoadScene("Nivel 1");
+		Time.timeScale = 1;
+
+		if (audioSource != null && audioSource.isPlaying)
+		{
+			audioSource.Stop();
+		}
+	}
+
 	public void Menu()
 	{
 		SceneManager.LoadScene("Menu");
