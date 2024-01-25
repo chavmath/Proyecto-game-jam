@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class PauseMenu : MonoBehaviour
+public class StoryN1Pause : MonoBehaviour
 {
 	[SerializeField] GameObject pauseMenu, text1, text2, text3, text4, text5, text6;
 	[SerializeField] AudioSource audioSource; // Asegúrate de asignar esto en el editor
