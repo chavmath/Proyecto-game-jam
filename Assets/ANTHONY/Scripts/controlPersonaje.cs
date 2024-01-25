@@ -5,8 +5,8 @@ using UnityEngine;
 
 public class ControlPersonaje : MonoBehaviour
 {
-    public float speed = 5.0f; // Velocidad de movimiento
-    public float jumpForce = 5.0f; // Fuerza del salto
+    public float speed = 2.8f; // Velocidad de movimiento
+    public float jumpForce = 7.0f; // Fuerza del salto
     private int isJumping = 0; // Para controlar el salto
     private UnityArmatureComponent armatureComponent; // Para controlar las animaciones
     private Rigidbody2D rb;

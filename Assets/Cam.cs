@@ -5,7 +5,7 @@ using UnityEngine;
 public class Cam : MonoBehaviour
 {
     public Transform target;
-    public float minY = -0.7718472f; // Límite inferior para la cámara
+    public float minX = -0.7718472f; // Límite inferior para la cámara en el eje X
 
     private void Start()
     {
@@ -20,8 +20,8 @@ public class Cam : MonoBehaviour
     {
         if (target != null)
         {
-            float y = Mathf.Max(target.position.y + 3.9f, minY);
-            transform.position = new Vector3(target.position.x + 6, y, transform.position.z);
+            float x = Mathf.Max(target.position.x + 6, minX);
+            transform.position = new Vector3(x, target.position.y + 4.9f, transform.position.z);
         }
     }
 }

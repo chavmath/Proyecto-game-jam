@@ -3,9 +3,12 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using static UnityEngine.GraphicsBuffer;
 
 public class ControlJuego : MonoBehaviour
 {
+    
+
     public AudioSource audioSource; // Referencia al componente AudioSource
     public AudioClip audioClip; // Referencia al clip de audio
     public GameObject jugador; // Prefab del cuadrado
@@ -69,6 +72,8 @@ public class ControlJuego : MonoBehaviour
         ActivarTemporizador();
         // Asigna el evento de clic al botón
         botonAceptar.onClick.AddListener(RestablecerNivelUno);
+        // Establece la posición del personaje principal
+        jugador.transform.position = new Vector3(-8.014271f, -4, 0);
 
 
     }
