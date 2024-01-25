@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class PauseMenu : MonoBehaviour
+public class StoryPause : MonoBehaviour
 {
 	[SerializeField] GameObject pauseMenu, text1, text2, text3, text4, text5, text6;
 	[SerializeField] AudioSource audioSource; // Asegúrate de asignar esto en el editor
@@ -31,6 +31,17 @@ public class PauseMenu : MonoBehaviour
 		if (audioSource != null && audioSource.isPlaying)
 		{
 			audioSource.Pause();
+		}
+	}
+
+	public void Skip()
+	{
+		SceneManager.LoadScene("Nivel 1 Story");
+		Time.timeScale = 1;
+
+		if (audioSource != null && audioSource.isPlaying)
+		{
+			audioSource.Stop();
 		}
 	}
 
