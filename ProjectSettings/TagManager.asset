@@ -14,10 +14,10 @@ TagManager:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Background
   - Water
   - UI
-  - 
+  - Ground
   - 
   - 
   - 
@@ -47,6 +47,17 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+<<<<<<< HEAD
   - name: Op
     uniqueID: 4066205671
+=======
+  - name: Background
+    uniqueID: 1442332111
+    locked: 0
+  - name: Ground
+    uniqueID: 3401931519
+    locked: 0
+  - name: Player
+    uniqueID: 1267704887
+>>>>>>> ebc05f3267811ff96e6dc591c23be05211f9faad
     locked: 0
