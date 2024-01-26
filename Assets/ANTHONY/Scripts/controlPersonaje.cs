@@ -10,6 +10,8 @@ public class ControlPersonaje : MonoBehaviour
     private int isJumping = 0; // Para controlar el salto
     private UnityArmatureComponent armatureComponent; // Para controlar las animaciones
     private Rigidbody2D rb;
+    ControlJuego controladorJuego = GameObject.Find("ControlJuego").GetComponent<ControlJuego>();
+
 
     // Start is called before the first frame update
     void Start()
@@ -67,5 +69,28 @@ public class ControlPersonaje : MonoBehaviour
             armatureComponent.animation.FadeIn("caminar", -1, -1);
             armatureComponent.animation.timeScale = 2.0f; // Doble de rápido
         }
+
+        if (collision.gameObject.CompareTag("Manzana"))
+        {
+            Destroy(collision.gameObject);
+            //Aumenta la velocidad por 3 segundos
+            speed = 5.0f;
+            Invoke("RestaurarVelocidad", 3.0f);
+            armatureComponent.animation.timeScale = 3.0f; // Doble de rápido
+
+        }
+
+        if (collision.gameObject.CompareTag("Reloj"))
+        {
+            Destroy(collision.gameObject);
+            ControlJuego controlJuego = FindObjectOfType<ControlJuego>();
+            controlJuego.IncrementarTiempo();
+        }
+    }
+
+    void RestaurarVelocidad()
+    {
+        speed = 2.8f;
+        armatureComponent.animation.timeScale = 2.0f; // Doble de rápido
     }
 }

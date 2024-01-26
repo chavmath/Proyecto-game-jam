@@ -5,6 +5,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using static UnityEngine.GraphicsBuffer;
 
+
 public class ControlJuego : MonoBehaviour
 {
     
@@ -12,6 +13,7 @@ public class ControlJuego : MonoBehaviour
     public AudioSource audioSource; // Referencia al componente AudioSource
     public AudioClip audioClip; // Referencia al clip de audio
     public GameObject jugador; // Prefab del cuadrado
+
 
 
     ///TEMPORIZADOR
@@ -144,13 +146,18 @@ public class ControlJuego : MonoBehaviour
         bloquesDestruidosMorado = 10;
         bloquesDestruidosAzul = 10;
 
-        // Restablecer los contadores de bloques destruidos
-        contadorBloquesMoradoText.text = "" + bloquesDestruidosMorado;
-        contadorBloquesAzulText.text = "" + bloquesDestruidosAzul;
+        //Cambiar posicion del jugador
+        jugador.transform.position = new Vector3(-8.014271f, -4, 0);
 
-   
         // Restablecer el temporizador
         ActivarTemporizador();
+    }
+
+    public void IncrementarTiempo()
+    {
+        //Suma 5 segundos al tiempo
+        tiempoActual+=5;
+        slider.maxValue = tiempoActual += 0.5f; ;
     }
 
 

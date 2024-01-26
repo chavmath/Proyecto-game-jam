@@ -7,6 +7,9 @@ TagManager:
   - Boundary
   - Enemy
   - Suelo
+  - Manzana
+  - Reloj
+  - Jugador
   layers:
   - Default
   - TransparentFX
@@ -43,4 +46,7 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Op
+    uniqueID: 4066205671
     locked: 0

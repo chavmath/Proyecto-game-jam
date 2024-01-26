@@ -21,7 +21,7 @@ public class Cam : MonoBehaviour
         if (target != null)
         {
             float x = Mathf.Max(target.position.x + 6, minX);
-            transform.position = new Vector3(x, target.position.y + 4.9f, transform.position.z);
+            transform.position = new Vector3(x, target.position.y + 3.9f, transform.position.z);
         }
     }
 }
