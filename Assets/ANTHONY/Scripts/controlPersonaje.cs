@@ -11,6 +11,11 @@ public class ControlPersonaje : MonoBehaviour
     private UnityArmatureComponent armatureComponent; // Para controlar las animaciones
     private Rigidbody2D rb;
     ControlJuego controladorJuego = GameObject.Find("ControlJuego").GetComponent<ControlJuego>();
+    public AudioSource audioSource; // Referencia al componente AudioSource
+    public AudioClip audioVolar; // Referencia al clip de audio
+    public AudioClip audioCaminar; // Referencia al clip de audio
+    public AudioClip audioComer; // Referencia al clip de audio
+    public AudioClip audioReloj; // Referencia al clip de audio
 
 
     // Start is called before the first frame update
@@ -27,6 +32,20 @@ public class ControlPersonaje : MonoBehaviour
         // Manejar el movimiento horizontal
         float horizontalInput = Input.GetAxis("Horizontal");
         rb.velocity = new Vector2(horizontalInput * speed, rb.velocity.y);
+     
+
+
+        // Cambiar la orientación del personaje dependiendo de la dirección
+        if (horizontalInput > 0)
+        {
+            armatureComponent.armature.flipX = false;
+
+        }
+        else if (horizontalInput < 0)
+        {
+            armatureComponent.armature.flipX = true;
+        }
+
 
         // Reproducir la animación de caminar si el personaje se está moviendo
         if (Mathf.Abs(horizontalInput) > 0.1f && isJumping == 0)
@@ -35,6 +54,10 @@ public class ControlPersonaje : MonoBehaviour
             {
                 armatureComponent.animation.FadeIn("caminar", -1, -1);
                 armatureComponent.animation.timeScale = 2.0f; // Doble de rápido
+                audioSource.PlayOneShot(audioCaminar);
+
+
+
             }
         }
         else
@@ -42,14 +65,19 @@ public class ControlPersonaje : MonoBehaviour
             // Si no está caminando, reproducir la animación de estar quieto
             if (armatureComponent.animation.lastAnimationName != "estar_quieto")
             {
+                //Pausar el sonido de caminar
                 armatureComponent.animation.FadeIn("estar_quieto", -1, -1);
                 armatureComponent.animation.timeScale = 1.0f; // Velocidad normal
+                                                              // Si está reproduciendo el sonido de caminar, pararlo
+               
             }
         }
 
         // Manejar el salto
         if (Input.GetButtonDown("Jump") && isJumping < 2) // Permitir dos saltos
         {
+            //Reproducir el sonido de salto
+            audioSource.PlayOneShot(audioVolar);
             // Reproducir la animación de salto y ajustar la velocidad
             armatureComponent.animation.FadeIn("volar", -1, 1);
             armatureComponent.animation.timeScale = 0.5f;
@@ -72,6 +100,8 @@ public class ControlPersonaje : MonoBehaviour
 
         if (collision.gameObject.CompareTag("Manzana"))
         {
+            //Reproducir el sonido de comer
+            audioSource.PlayOneShot(audioComer);
             Destroy(collision.gameObject);
             //Aumenta la velocidad por 3 segundos
             speed = 5.0f;
@@ -82,6 +112,8 @@ public class ControlPersonaje : MonoBehaviour
 
         if (collision.gameObject.CompareTag("Reloj"))
         {
+            //Reproducir el sonido de reloj
+            audioSource.PlayOneShot(audioReloj);
             Destroy(collision.gameObject);
             ControlJuego controlJuego = FindObjectOfType<ControlJuego>();
             controlJuego.IncrementarTiempo();

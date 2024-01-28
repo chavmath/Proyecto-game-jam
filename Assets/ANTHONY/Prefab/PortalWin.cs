@@ -27,6 +27,16 @@ public class PortalWin : MonoBehaviour
         
     }
 
+    IEnumerator EsperarYActuar(Collider2D other)
+    {
+        // Espera 5 segundos
+        yield return new WaitForSeconds(5);
+
+        // Activa el canvas modalGanar si existe
+        modalGanar.gameObject.SetActive(true);
+        SceneManager.LoadScene("Nivel 1 Story");
+    }
+
     void OnTriggerStay2D(Collider2D other)
     {
         // Comprobamos si el objeto que ha entrado en el trigger es el jugador
@@ -53,10 +63,10 @@ public class PortalWin : MonoBehaviour
             // Aplica una fuerza al jugador en la dirección del portal
             other.GetComponent<Rigidbody2D>().AddForce(direccion * fuerzaDeAtraccion);
 
-            // Activa el canvas modalGanar si existe
-            modalGanar.gameObject.SetActive(true);
-            SceneManager.LoadScene("Nivel 1 Story");
+            // Inicia la corrutina
+            StartCoroutine(EsperarYActuar(other));
         }
     }
+
 
 }
