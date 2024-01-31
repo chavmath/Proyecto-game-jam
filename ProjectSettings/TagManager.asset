@@ -8,6 +8,8 @@ TagManager:
   - Suelo
   - Reloj
   - Obstacle
+  - Bubble
+  - Octopus
   layers:
   - Default
   - TransparentFX

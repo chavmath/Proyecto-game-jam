@@ -5,6 +5,7 @@ using UnityEngine;
 public class Octopus : MonoBehaviour
 {
     private int bubbleCount = 0;
+    [SerializeField] private ParticleSystem testParticleSystem = default;
 
     void OnTriggerEnter2D(Collider2D other)
     {
@@ -19,9 +20,11 @@ public class Octopus : MonoBehaviour
             // Verifica si se ha alcanzado el límite de 10 burbujas
             if (bubbleCount >= 50)
             {
+                testParticleSystem.Play();
                 // Si se alcanza el límite, reinicia el contador y destruye el pulpo
                 bubbleCount = 0;
                 Destroy(gameObject);
+                
             }
         }
 

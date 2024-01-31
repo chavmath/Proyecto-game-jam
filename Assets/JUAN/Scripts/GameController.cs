@@ -9,7 +9,8 @@ public class GameController : MonoBehaviour
     Rigidbody2D playerRb;
     [SerializeField] private ParticleSystem testParticleSystem = default;
     [SerializeField] private AudioClip deathClip = default; // Audio clip for death sound
-    
+    [SerializeField] private TrailRenderer trailRenderer;
+
 
     private void Awake()
     {
@@ -57,6 +58,7 @@ public class GameController : MonoBehaviour
 
     IEnumerator Respawn(float duration)
     {
+        trailRenderer.enabled = false;
         testParticleSystem.Play();
         playerRb.velocity = Vector2.zero;
         playerRb.simulated = false;
@@ -69,6 +71,7 @@ public class GameController : MonoBehaviour
 
 
         playerRb.simulated = true;
+        trailRenderer.enabled = true;
     }
 
 }

@@ -30,11 +30,11 @@ public class PortalWin : MonoBehaviour
     IEnumerator EsperarYActuar(Collider2D other)
     {
         // Espera 5 segundos
-        yield return new WaitForSeconds(5);
+        yield return new WaitForSeconds(1);
 
         // Activa el canvas modalGanar si existe
         modalGanar.gameObject.SetActive(true);
-        SceneManager.LoadScene("Nivel 1 Story");
+        SceneManager.LoadScene("Nivel 2 Story");
     }
 
     void OnTriggerStay2D(Collider2D other)
