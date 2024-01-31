@@ -6,13 +6,13 @@ public class Player_Level2 : MonoBehaviour
 {
     public float velocidadMovimiento = 5f;
     public float fuerzaSalto = 10f;
-
     public Transform bubbleSpawnPoint;
     public GameObject bubblePrefab;
     public float bubbleSpeed = 10;
-
     private Rigidbody2D rb;
     private bool facingRight = true;
+    private float lastShootTime = 0f;
+    public float tiempoEntreDisparos = 1f;
 
     void Start()
     {
@@ -38,11 +38,17 @@ public class Player_Level2 : MonoBehaviour
         }
 
         // Disparar
-        if (Input.GetKeyDown(KeyCode.X))
+        if (Input.GetMouseButton(0) && Time.time - lastShootTime >= tiempoEntreDisparos)
         {
-            var bubble = Instantiate(bubblePrefab, bubbleSpawnPoint.position, bubbleSpawnPoint.rotation);
-            bubble.GetComponent<Rigidbody2D>().velocity = bubbleSpawnPoint.up * bubbleSpeed;
+            Disparar();
         }
+    }
+
+    void Disparar()
+    {
+        var bubble = Instantiate(bubblePrefab, bubbleSpawnPoint.position, bubbleSpawnPoint.rotation);
+        bubble.GetComponent<Rigidbody2D>().velocity = bubbleSpawnPoint.up * bubbleSpeed;
+        lastShootTime = Time.time;
     }
 
     void Voltear()

@@ -7,6 +7,7 @@ TagManager:
   - Manzana
   - Suelo
   - Reloj
+  - Obstacle
   layers:
   - Default
   - TransparentFX
