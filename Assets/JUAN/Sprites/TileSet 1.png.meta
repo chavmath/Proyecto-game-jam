@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 050e5928e450c8642ba0b32e0ddb551a
+guid: 46cf6ffe63739504fbe8c03e945ed682
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -48,7 +48,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 80
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -69,7 +69,7 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 2048
+    maxTextureSize: 4096
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
@@ -110,11 +110,11 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Spikes_0
+      name: TileSet 1_14
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
+        x: 319
+        y: 320
         width: 80
         height: 80
       alignment: 0
@@ -124,18 +124,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e553c8ca149a3da48a5a344e6192c552
-      internalID: -701091647
+      spriteID: cc50538d4c1a54841b53bb2343166cb5
+      internalID: 102573761
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Spikes_1
+      name: TileSet 1_15
       rect:
         serializedVersion: 2
-        x: 80
-        y: 0
+        x: 400
+        y: 320
         width: 80
         height: 80
       alignment: 0
@@ -145,8 +145,71 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 35eb5bbfd0d2c244c81be3b4b62c6bf2
-      internalID: -1775743603
+      spriteID: 662442bda100fbc4f931b965562646ec
+      internalID: 1802762266
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TileSet 1_16
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 320
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b8a45ff7295a4345af9698b01544e05
+      internalID: 2137319788
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TileSet 1_17
+      rect:
+        serializedVersion: 2
+        x: 560
+        y: 320
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa356f9932aea86418a0e7e4d18f7121
+      internalID: 1125900033
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TileSet 1_18
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 320
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 70bcf401cacb8294690be0159d248432
+      internalID: 717341472
       vertices: []
       indices: 
       edges: []
@@ -162,8 +225,57 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Spikes_0: -701091647
-      Spikes_1: -1775743603
+      TileSet 1_0: -1274758271
+      TileSet 1_1: 2133206405
+      TileSet 1_10: 1430478612
+      TileSet 1_11: 2042960040
+      TileSet 1_12: 1167062313
+      TileSet 1_13: 1798196744
+      TileSet 1_14: 102573761
+      TileSet 1_15: 1802762266
+      TileSet 1_16: 2137319788
+      TileSet 1_17: 1125900033
+      TileSet 1_18: 717341472
+      TileSet 1_19: 61213231
+      TileSet 1_2: -773289394
+      TileSet 1_20: -1516594505
+      TileSet 1_21: -941387130
+      TileSet 1_22: 1179509299
+      TileSet 1_23: -812433332
+      TileSet 1_24: 1771798833
+      TileSet 1_25: -325400948
+      TileSet 1_26: -1818292779
+      TileSet 1_27: 733238604
+      TileSet 1_28: -246883158
+      TileSet 1_29: 1546185850
+      TileSet 1_3: -1475490268
+      TileSet 1_30: 881157984
+      TileSet 1_31: 815703721
+      TileSet 1_32: 243778890
+      TileSet 1_33: 1438277114
+      TileSet 1_34: 1267627554
+      TileSet 1_35: -120522309
+      TileSet 1_36: -2089732661
+      TileSet 1_37: -644647781
+      TileSet 1_38: 1514477129
+      TileSet 1_39: -639730989
+      TileSet 1_4: 465056956
+      TileSet 1_40: 667353320
+      TileSet 1_41: -15656155
+      TileSet 1_42: -1701744137
+      TileSet 1_43: -1636937781
+      TileSet 1_44: -1085029242
+      TileSet 1_45: 86231233
+      TileSet 1_46: 1093544949
+      TileSet 1_47: -528479884
+      TileSet 1_48: -1289995733
+      TileSet 1_49: 704641009
+      TileSet 1_5: -24441599
+      TileSet 1_50: -96990145
+      TileSet 1_6: -1201132666
+      TileSet 1_7: -1520516396
+      TileSet 1_8: -646700251
+      TileSet 1_9: 879420391
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
